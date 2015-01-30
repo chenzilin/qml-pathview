@@ -6,14 +6,10 @@ TARGET = pathview
 TEMPLATE = app
 
 # Sources and Headers
-INCLUDEPATH += src/include
-#HEADERS +=
-
 SOURCES += src/main.cpp
 
 # Qml Files
-OTHER_FILES += qml/main.qml \
-	qml/content/*.qml
+OTHER_FILES += qml/*.qml
 
 # Resources
 RESOURCES += pathview.qrc

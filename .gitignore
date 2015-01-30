@@ -1,0 +1,7 @@
+*~
+*.user
+bin/*
+build/*
+Makefile
+tags
+cscope.out

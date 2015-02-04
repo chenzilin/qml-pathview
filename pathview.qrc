@@ -13,5 +13,16 @@
         <file>images/EMail_48.png</file>
         <file>images/TodoList_48.png</file>
         <file>images/VideoPlayer_48.png</file>
+        <file>images/Search_48.png</file>
+        <file>images/Pencil_48.png</file>
+        <file>qml/changesix.qml</file>
+        <file>qml/changeseven.qml</file>
+        <file>images/Setting_48.png</file>
+        <file>images/Real_48.png</file>
+        <file>images/Global_48.png</file>
+        <file>images/Cube_48.png</file>
+        <file>images/Concha_48.png</file>
+        <file>images/Butterfly_48.png</file>
+        <file>qml/changeeight.qml</file>
     </qresource>
 </RCC>

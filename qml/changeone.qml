@@ -1,7 +1,7 @@
 import QtQuick 2.0
 
 Rectangle {
-	width: 400
+	width: 500
 	height: 230
 
 	ListModel {
@@ -63,11 +63,11 @@ Rectangle {
 		delegate: appDelegate
 		path: Path {
 			startX: 10
-			startY: 50
+			startY: 100
 			PathAttribute { name: "iconScale"; value: 0.5 }
-			PathQuad { x: 200; y: 150; controlX: 50; controlY: 200 }
+			PathQuad { x: 250; y: 100; controlX: 50; controlY: 100 }
 			PathAttribute { name: "iconScale"; value: 1.0 }
-			PathQuad { x: 390; y: 50; controlX: 350; controlY: 200 }
+			PathQuad { x: 490; y: 100; controlX: 450; controlY: 100 }
 			PathAttribute { name: "iconScale"; value: 0.5 }
 		}
 

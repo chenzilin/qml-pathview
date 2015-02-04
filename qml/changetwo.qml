@@ -1,16 +1,18 @@
 import QtQuick 2.0
 
 Rectangle {
-	width: 400
-	height: 230
+	width: 600
+	height: 300
 
 	ListModel {
 		id: appModel
 		ListElement { name: "Music"; icon: "qrc:/images/AudioPlayer_48.png" }
 		ListElement { name: "Movies"; icon: "qrc:/images/VideoPlayer_48.png" }
 		ListElement { name: "Camera"; icon: "qrc:/images/Camera_48.png" }
+		ListElement { name: "Pencil"; icon: "qrc:/images/Pencil_48.png" }
 		ListElement { name: "Calendar"; icon: "qrc:/images/DateBook_48.png" }
 		ListElement { name: "Messaging"; icon: "qrc:/images/EMail_48.png" }
+		ListElement { name: "Search"; icon: "qrc:/images/Search_48.png" }
 		ListElement { name: "Todo List"; icon: "qrc:/images/TodoList_48.png" }
 		ListElement { name: "Contacts"; icon: "qrc:/images/AddressBook_48.png" }
 	}
@@ -65,9 +67,9 @@ Rectangle {
 			startX: 10
 			startY: 50
 			PathAttribute { name: "iconScale"; value: 0.5 }
-			PathQuad { x: 200; y: 150; controlX: 50; controlY: 200 }
+			PathQuad { x: 300; y: 200; controlX: 50; controlY: 200 }
 			PathAttribute { name: "iconScale"; value: 1.0 }
-			PathQuad { x: 390; y: 50; controlX: 350; controlY: 200 }
+			PathQuad { x: 590; y: 50; controlX: 550; controlY: 200 }
 			PathAttribute { name: "iconScale"; value: 0.5 }
 		}
 

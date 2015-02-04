@@ -7,20 +7,11 @@
 #include <QCommandLineParser>
 #include <QQmlApplicationEngine>
 
-#define CURRENT_INDEX 0
+#define CURRENT_INDEX 8
 
 int main(int argc, char *argv[])
 {
 	QGuiApplication app(argc, argv);
-
-	QCommandLineParser parser;
-	QCommandLineOption serialOption(QStringList() << "s" << "serial port device name", "specify serial port device", "serial", "ttyS2");
-	parser.addOption(serialOption);
-	parser.process(app);
-
-	QString serial = "ttyS2";
-	if (parser.isSet(serialOption))
-		serial = parser.value(serialOption);
 
 	QQuickView viewer;
 
@@ -40,12 +31,20 @@ int main(int argc, char *argv[])
 	case 5:
 		viewer.setSource(QUrl("qrc:///qml/changefive.qml"));
 		break;
+	case 6:
+		viewer.setSource(QUrl("qrc:///qml/changesix.qml"));
+		break;
+	case 7:
+		viewer.setSource(QUrl("qrc:///qml/changeseven.qml"));
+		break;
+	case 8:
+		viewer.setSource(QUrl("qrc:///qml/changeeight.qml"));
+		break;
 	default:
 		viewer.setSource(QUrl("qrc:///qml/main.qml"));
 		break;
 	}
 
 	viewer.show();
-
 	return app.exec();
 }

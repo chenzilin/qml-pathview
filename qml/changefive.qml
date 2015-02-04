@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
 	width: 400
-	height: 230
+	height: 500
 
 	ListModel {
 		id: appModel
@@ -62,16 +62,16 @@ Rectangle {
 		model: appModel
 		delegate: appDelegate
 		path: Path {
-			startX: 10
-			startY: 50
+			startX: 200
+			startY: 10
 			PathAttribute { name: "iconScale"; value: 0.5 }
-			PathQuad { x: 200; y: 150; controlX: 50; controlY: 200 }
+			PathQuad { x: 200; y: 250; controlX: 200; controlY: 50 }
 			PathAttribute { name: "iconScale"; value: 1.0 }
-			PathQuad { x: 390; y: 50; controlX: 350; controlY: 200 }
+			PathQuad { x: 200; y: 490; controlX: 200; controlY: 440 }
 			PathAttribute { name: "iconScale"; value: 0.5 }
 		}
 
-		Keys.onLeftPressed: if (!moving) decrementCurrentIndex()
-		Keys.onRightPressed: if (!moving) incrementCurrentIndex()
+		Keys.onUpPressed:  if (!moving) decrementCurrentIndex()
+		Keys.onDownPressed: if (!moving) incrementCurrentIndex()
 	}
 }

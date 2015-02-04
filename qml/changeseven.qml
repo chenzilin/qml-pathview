@@ -1,17 +1,23 @@
 import QtQuick 2.0
 
 Rectangle {
-	width: 600
-	height: 230
+	width: 400
+	height: 400
 
 	ListModel {
 		id: appModel
 		ListElement { name: "Music"; icon: "qrc:/images/AudioPlayer_48.png" }
+		ListElement { name: "Global"; icon: "qrc:/images/Global_48.png" }
 		ListElement { name: "Movies"; icon: "qrc:/images/VideoPlayer_48.png" }
+		ListElement { name: "Setting"; icon: "qrc:/images/Setting_48.png" }
 		ListElement { name: "Camera"; icon: "qrc:/images/Camera_48.png" }
+		ListElement { name: "Cube"; icon: "qrc:/images/Cube_48.png" }
 		ListElement { name: "Calendar"; icon: "qrc:/images/DateBook_48.png" }
+		ListElement { name: "Butterfly"; icon: "qrc:/images/Butterfly_48.png" }
 		ListElement { name: "Messaging"; icon: "qrc:/images/EMail_48.png" }
+		ListElement { name: "Real"; icon: "qrc:/images/Real_48.png" }
 		ListElement { name: "Todo List"; icon: "qrc:/images/TodoList_48.png" }
+		ListElement { name: "Concha"; icon: "qrc:/images/Concha_48.png" }
 		ListElement { name: "Contacts"; icon: "qrc:/images/AddressBook_48.png" }
 	}
 
@@ -62,13 +68,21 @@ Rectangle {
 		model: appModel
 		delegate: appDelegate
 		path: Path {
-			startX: 10
-			startY: 180
+			startX: 350
+			startY: 100
+			PathAttribute { name: "iconScale"; value: 0.3 }
+			PathQuad { x: 200; y: 20; controlX: 300; controlY: 30 }
+			PathAttribute { name: "iconScale"; value: 0.4 }
+			PathQuad { x: 80; y: 100; controlX: 110; controlY: 30 }
 			PathAttribute { name: "iconScale"; value: 0.5 }
-			PathQuad { x: 300; y: 50; controlX: 50; controlY: 100 }
+			PathQuad { x: 200; y: 200; controlX: 90; controlY: 170 }
 			PathAttribute { name: "iconScale"; value: 1.0 }
-			PathQuad { x: 590; y: 180; controlX: 550; controlY: 100 }
+			PathQuad { x: 320; y: 300; controlX: 280; controlY: 220 }
 			PathAttribute { name: "iconScale"; value: 0.5 }
+			PathQuad { x: 200; y: 380; controlX: 270; controlY: 370 }
+			PathAttribute { name: "iconScale"; value: 0.4 }
+			PathQuad { x: 50; y: 300; controlX: 80; controlY: 370 }
+			PathAttribute { name: "iconScale"; value: 0.3 }
 		}
 
 		Keys.onLeftPressed: if (!moving) decrementCurrentIndex()
